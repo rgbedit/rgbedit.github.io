@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>RGB edit</title>
+		<link rel="shortcut icon" href="icon.png" type="image/png">
+		<style type="text/css">
+		#help{
+			    position: absolute;
+				left: 10px;
+				top: 10px;
+				width: 300px;
+				height: 1000px;
+			
+		}
+		
+		#egg {
+			position: absolute;
+			left: 45%;
+			top: 20%;
+			width: 136px;
+			height: 190px;
+			background: #ffc000;
+			display: block;
+			-webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+			border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+		}
+		</style>
+	</head>
+	<body onLoad="changeColor();">
+			<div id="help">
+			Передвигайте ползунки для смены цвета яйца.
+		</div>
+		<div align="center">
+			<input type="range" min="0" max="256" step="1" value="0" id="r"><br>
+			<input type="range" min="0" max="256" step="1" value="0" id="g"><br>
+			<input type="range" min="0" max="256" step="1" value="0" id="b"><br>
+			<div id="getter">
+				<input type="button" value="Получить RGB" onclick="getRGB()">
+					<script type="text/javascript">
+					function getRGB(){
+						var r = document.getElementById("r").value;
+						var g = document.getElementById("g").value;
+						var b = document.getElementById("b").value;
+						var rgb = r + g + b;
+						alert("Значение цветовой схемы RGB: " + "#" + rgb);
+					}
+				</script>
+			</div>	
+		</div>
+			<script type="text/javascript">
+				function changeColor(){
+					var r = document.getElementById("r").value;
+					var g = document.getElementById("g").value;
+					var b = document.getElementById("b").value;
+					document.getElementById("egg").style.backgroundColor = "rgb("+r+", "+g+", "+b+")";
+					setTimeout("changeColor()", 50);
+			}
+		</script>
+		<div id="egg"></div>
+	</body>
+</html>
