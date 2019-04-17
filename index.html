@@ -46,13 +46,48 @@
 		#egg {
 			position: fixed;
 			left: 45%;
-			top: 45%;
+			top: 25%;
 			width: 146px;
 			height: 200px;
 			background: #000;
 			display: block;
 			-webkit-border-radius: 73px 73px 73px 73px / 118px 118px 82px 82px;
 			border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+		}
+		
+		#fastcolor {
+			position: fixed;
+			left: 39%;
+			top: 60%;
+		}
+		
+		#red {
+			background-color: #F00;
+			width: 25px;
+			height: 25px;
+		}
+		
+		#green {
+			background-color: #0F0;
+			width: 25px;
+			height: 25px;
+		}
+		
+		#blue {
+			background-color: #00F;
+			width: 25px;
+			height: 25px;
+		}
+		#white {
+			background-color: #FFF;
+			width: 25px;
+			height: 25px;
+		}
+		
+		#black {
+			background-color: #000;
+			width: 25px;
+			height: 25px;
 		}
 		</style>
 	</head>
@@ -75,6 +110,41 @@
 						alert("Значение цветовой схемы RGB: " + "#" + rgb);
 					}
 				</script>
+			</div>
+			<div id="fastcolor">
+					Быстрый цвет:
+				  <button onclick="setRed();" id="red"></button>
+					<button onclick="setGreen();" id="green"></button>
+					<button onclick="setBlue();" id="blue"></button>
+					<button onclick="setWhite();" id="white"></button>
+					<button onclick="setBlack();" id="black"></button>
+					<script type="text/javascript">
+					  function setRed(){
+							document.getElementById("r").value = 255;
+							document.getElementById("g").value = 0;
+							document.getElementById("b").value = 0;
+						}
+						function setGreen(){
+							document.getElementById("r").value = 0;
+							document.getElementById("g").value = 255;
+							document.getElementById("b").value = 0;
+						}
+						function setBlue(){
+							document.getElementById("r").value = 0;
+							document.getElementById("g").value = 0;
+							document.getElementById("b").value = 255;
+						}
+						function setWhite(){
+							document.getElementById("r").value = 255;
+							document.getElementById("g").value = 255;
+							document.getElementById("b").value = 255;
+						}
+						function setBlack(){
+							document.getElementById("r").value = 0;
+							document.getElementById("g").value = 0;
+							document.getElementById("b").value = 0;
+						}
+					</script>
 			</div>
 			<div id="egg"></div>
 			<div id="help">
