@@ -3,93 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<title>RGB edit</title>
-		<link rel="shortcut icon" href="icon.png" type="image/png">
-		<style type="text/css">
-			#main {
-				position: fixed;
-				background-image: url("fon.png");
-				filter: blur(1px);
-				left: 3%; right: 3%;
-				top: 0%; bottom: 0%;
-			}
-			
-			#getter {
-				position: fixed;
-				left: 10%; right: 10%;
-				top: 16%; bottom: 10%;
-			}
-			
-			#ranges {
-				position: fixed;
-				left: 10%; right: 10%;
-				top: 3%; bottom: 10%;
-			}
-			
-		#help {
-			  position: fixed;
-				left: 4%;
-				top: 2%;
-				width: 300px;
-				height: 1000px;
-			
-		}
-		
-		#footer {
-			position: fixed;
-			left: 0; bottom: 0;
-			padding: 10px;
-			background: #000;
-			color: #fff;
-			width: 100%;
-		}
-		
-		#egg {
-			position: fixed;
-			left: 45%;
-			top: 25%;
-			width: 146px;
-			height: 200px;
-			background: #000;
-			display: block;
-			-webkit-border-radius: 73px 73px 73px 73px / 118px 118px 82px 82px;
-			border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-		}
-		
-		#fastcolor {
-			position: fixed;
-			left: 39%;
-			top: 60%;
-		}
-		
-		#red {
-			background-color: #F00;
-			width: 25px;
-			height: 25px;
-		}
-		
-		#green {
-			background-color: #0F0;
-			width: 25px;
-			height: 25px;
-		}
-		
-		#blue {
-			background-color: #00F;
-			width: 25px;
-			height: 25px;
-		}
-		#white {
-			background-color: #FFF;
-			width: 25px;
-			height: 25px;
-		}
-		
-		#black {
-			background-color: #000;
-			width: 25px;
-			height: 25px;
-		}
-		</style>
+		<link rel="shortcut icon" href="images/icon.png" type="image/png">
+		<link rel="stylesheet" href="styles.css">
+		<script src="scripts.js"></script>
 	</head>
 	<body onLoad="changeColor();">
 		<div id="bodysl"></div>
@@ -100,16 +16,7 @@
 			<input type="range" min="0" max="256" step="1" value="0" id="b"><br>
 		</div>
 			<div id="getter" align="center">
-				<input type="button" value="Получить RGB" onclick="getRGB()">
-					<script type="text/javascript">
-					function getRGB(){
-						var r = document.getElementById("r").value;
-						var g = document.getElementById("g").value;
-						var b = document.getElementById("b").value;
-						var rgb = r + g + b;
-						alert("Значение цветовой схемы RGB: " + "#" + rgb);
-					}
-				</script>
+				<input type="button" value="Получить RGB" onclick="getRGB()" id="get">
 			</div>
 			<div id="fastcolor">
 					Быстрый цвет:
@@ -118,54 +25,23 @@
 					<button onclick="setBlue();" id="blue"></button>
 					<button onclick="setWhite();" id="white"></button>
 					<button onclick="setBlack();" id="black"></button>
-					<script type="text/javascript">
-					  function setRed(){
-							document.getElementById("r").value = 255;
-							document.getElementById("g").value = 0;
-							document.getElementById("b").value = 0;
-						}
-						function setGreen(){
-							document.getElementById("r").value = 0;
-							document.getElementById("g").value = 255;
-							document.getElementById("b").value = 0;
-						}
-						function setBlue(){
-							document.getElementById("r").value = 0;
-							document.getElementById("g").value = 0;
-							document.getElementById("b").value = 255;
-						}
-						function setWhite(){
-							document.getElementById("r").value = 255;
-							document.getElementById("g").value = 255;
-							document.getElementById("b").value = 255;
-						}
-						function setBlack(){
-							document.getElementById("r").value = 0;
-							document.getElementById("g").value = 0;
-							document.getElementById("b").value = 0;
-						}
-					</script>
 			</div>
 			<div id="egg"></div>
 			<div id="help">
 				Передвигайте ползунки для смены цвета яйца и фона.
 			</div>
+			<div id="opendialog" align="center">
+				<input type="button" id="buttondia" value="Что такое RGB" onclick="document.getElementById('dialog').showModal();">
+			</div>
+			<dialog id="dialog">
+				<text><b>RGB (аббревиатура английских слов red, green, blue — красный, зелёный, синий) или КЗС </b> —
+					<i>аддитивная цветовая модель</i>, как правило, описывающая способ кодирования цвета для цветовоспроизведения с помощью трёх цветов, которые принято называть основными.
+					Выбор основных цветов обусловлен особенностями физиологии восприятия цвета сетчаткой человеческого глаза.
+					Цветовая модель RGB нашла широкое применение в технике.</text>
+					<br>
+					<input type="button" value="OK" onclick="document.getElementById('dialog').close();">
+			</dialog>
 		</div>
-			<script type="text/javascript">
-				function changeColor(){
-					var r = document.getElementById("r").value;
-					var g = document.getElementById("g").value;
-					var b = document.getElementById("b").value;
-					var br = r - "10";
-					var bg = g - "10";
-					var bb = b - "10";
-					document.getElementById("egg").style.backgroundColor = "rgb("+ r +", "+ g +", "+ b +")";
-					document.getElementById("footer").style.backgroundColor = "rgb("+ r +", "+ g +", "+ b +")";
-					document.body.style.backgroundColor = "rgb("+ br +", "+ bg +", "+ bb +")";
-					setTimeout("changeColor()", 50);
-			}
-		</script>
-		
 		<div id="footer">
 			rgbedit.github.io
 		</div>
