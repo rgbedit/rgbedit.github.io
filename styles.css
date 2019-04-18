@@ -1,0 +1,84 @@
+#main {
+    position: fixed;
+    background-image: url("fon.png");
+    filter: blur(1px);
+    left: 3%; right: 3%;
+    top: 0%; bottom: 0%;
+  }
+  
+  #getter {
+    position: fixed;
+    left: 10%; right: 10%;
+    top: 16%; bottom: 10%;
+  }
+  
+  #ranges {
+    position: fixed;
+    left: 10%; right: 10%;
+    top: 3%; bottom: 10%;
+  }
+  
+#help {
+    position: fixed;
+    left: 4%;
+    top: 2%;
+    width: 300px;
+    height: 1000px;
+  
+}
+
+#footer {
+  position: fixed;
+  left: 0; bottom: 0;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  width: 100%;
+}
+
+#egg {
+  position: fixed;
+  left: 45%;
+  top: 25%;
+  width: 146px;
+  height: 200px;
+  background: #000;
+  display: block;
+  -webkit-border-radius: 73px 73px 73px 73px / 118px 118px 82px 82px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+#fastcolor {
+  position: fixed;
+  left: 39%;
+  top: 60%;
+}
+
+#red {
+  background-color: #F00;
+  width: 25px;
+  height: 25px;
+}
+
+#green {
+  background-color: #0F0;
+  width: 25px;
+  height: 25px;
+}
+
+#blue {
+  background-color: #00F;
+  width: 25px;
+  height: 25px;
+}
+#white {
+  background-color: #FFF;
+  width: 25px;
+  height: 25px;
+}
+
+#black {
+  background-color: #000;
+  width: 25px;
+  height: 25px;
+}
