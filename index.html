@@ -8,7 +8,7 @@
 		<script src="scripts.js"></script>
 	</head>
 	<body onLoad="changeColor();">
-		<div id="bodysl"></div>
+		<div id="bodysl">
 		<div align="center" id="main"></div>
 			<div id="ranges" align="center">
 			<input type="range" min="0" max="256" step="1" value="0" id="r"><br>
@@ -30,8 +30,9 @@
 			<div id="help">
 				Передвигайте ползунки для смены цвета яйца и фона.
 			</div>
+			</div>
 			<div id="opendialog" align="center">
-				<input type="button" id="buttondia" value="Что такое RGB" onclick="document.getElementById('dialog').showModal();">
+				<input type="button" id="buttondia" value="Что такое RGB" onclick="openDialog()">
 			</div>
 			<dialog id="dialog">
 				<text><b>RGB (аббревиатура английских слов red, green, blue — красный, зелёный, синий) или КЗС </b> —
@@ -39,7 +40,7 @@
 					Выбор основных цветов обусловлен особенностями физиологии восприятия цвета сетчаткой человеческого глаза.
 					Цветовая модель RGB нашла широкое применение в технике.</text>
 					<br>
-					<input type="button" value="OK" onclick="document.getElementById('dialog').close();">
+					<input type="button" value="OK" onclick="closeDialog()">
 			</dialog>
 		</div>
 		<div id="footer">

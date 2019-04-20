@@ -39,6 +39,12 @@ function getRGB(){
   var r = document.getElementById("r").value;
   var g = document.getElementById("g").value;
   var b = document.getElementById("b").value;
-  var rgb = r + g + b;
-  alert("Значение цветовой схемы RGB: " + "rgb(" + rgb  + ")");
+  alert("Значение цветовой схемы RGB: " + "rgb("+ r +", "+ g +", "+ b +")");
+}
+function openDialog(){
+  document.getElementById('dialog').showModal();
+}
+
+function closeDialog(){
+  document.getElementById('dialog').close();
 }
