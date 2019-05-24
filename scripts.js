@@ -1,5 +1,5 @@
   //Created by SuperCatMaster special for site RGB MARK
-  
+  //All in this project are open source.
   function changeColor(){
     var r = document.getElementById("r").value;
     var g = document.getElementById("g").value;
