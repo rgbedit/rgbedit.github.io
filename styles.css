@@ -1,5 +1,6 @@
 /*
 Created by SuperCatMaster special for site RGB MARK
+All in this project are open source.
 */
 #main {
     position: fixed;
@@ -8,25 +9,44 @@ Created by SuperCatMaster special for site RGB MARK
     left: 3%; right: 3%;
     top: 0%; bottom: 0%;
   }
-  
+
+#downloadtext {
+  margin-left: 60%;
+}
+
+A{
+  color: gray;
+}
+A:visited{
+  color: dimGrey;
+}
+A:active{
+  color: white;
+}
+
+#foottext {
+  position: fixed;
+  left: 45%;
+}
+
   #getter {
     position: fixed;
     left: 10%; right: 10%;
     top: 16%; bottom: 10%;
   }
-  
+
   #get {
     background-color: #FFF;
     color: #000;
     border-color: #FFF;
   }
-  
+
   #ranges {
     position: fixed;
     left: 10%; right: 10%;
     top: 3%; bottom: 10%;
   }
-  
+
   #help {
     position: fixed;
     left: 4%;
@@ -95,7 +115,7 @@ Created by SuperCatMaster special for site RGB MARK
   color: #000;
   font-size: 15px;
   text-align: center;
-  
+
 }
 
 #opendialog {
